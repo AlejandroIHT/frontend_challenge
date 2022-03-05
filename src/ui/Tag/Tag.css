@@ -1,0 +1,16 @@
+.tag {
+  padding: 0.25rem 1rem;
+  border-radius: 1.563rem;
+  font-size: var(--small-size);
+  font-weight: 500;
+}
+
+.tag--primary {
+  background: var(--light-red);
+  color: var(--red);
+}
+
+.tag--secondary {
+  background: var(--light-blue-gray);
+  color: var(--blue-gray);
+}
