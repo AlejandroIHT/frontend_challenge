@@ -32,6 +32,7 @@ interface DescriptionProps {
 }
 
 interface CardProps {
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -87,8 +88,8 @@ const Description: React.FC<DescriptionProps> = ({ children, className }) => {
   );
 };
 
-const Card = ({ children }: CardProps) => {
-  return <div className="card">{children}</div>;
+const Card = ({ children, className }: CardProps) => {
+  return <div className={classNames('card', className)}>{children}</div>;
 };
 
 Card.Header = Header;
