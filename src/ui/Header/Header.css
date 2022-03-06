@@ -1,6 +1,10 @@
 .header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
   padding: 1.5rem;
   box-shadow: 0px 0.188rem 1rem 0px rgb(0 0 0 / 10%);
+  z-index: 10;
 }
 
 .header > h4 {
