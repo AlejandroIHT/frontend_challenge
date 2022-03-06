@@ -1,0 +1,32 @@
+.characters-list {
+  padding: 2rem;
+}
+
+.characters-list > h1 {
+  color: var(--red);
+  font-size: var(--mega-biggest-size);
+  margin-bottom: 2rem;
+}
+
+.characters-list__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .characters-list__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .characters-list {
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+
+  .characters-list__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
