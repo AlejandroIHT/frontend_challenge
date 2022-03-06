@@ -8,7 +8,7 @@ const Header = () => {
       <h4>
         Frontend-Challenge | <span>Rick&Morty</span>
       </h4>
-      <SearchBar placeholder="Busca por nombre del personaje…" />
+      <SearchBar placeholder="Search for name of character…" />
     </div>
   );
 };
