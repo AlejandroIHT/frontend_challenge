@@ -1,0 +1,9 @@
+.layout {
+  min-height: 100vh;
+  min-width: 100%;
+  position: relative;
+}
+
+.layout__body {
+  padding-bottom: 7.344rem;
+}
