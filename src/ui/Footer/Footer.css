@@ -1,0 +1,15 @@
+.footer {
+  background: var(--light-blue-gray);
+  color: var(--blue-gray);
+  font-size: var(--large-size);
+  padding: 3rem 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer a {
+  color: var(--blue-gray);
+  font-style: italic;
+}
