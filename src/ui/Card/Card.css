@@ -1,0 +1,58 @@
+.card {
+  width: 23.438rem;
+  height: auto;
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0px 0.188rem 1rem 0px rgb(0 0 0 / 10%);
+}
+
+.card__header {
+  background: var(--red);
+  padding: 1.25rem 1.75rem;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.card__header h6 {
+  font-size: var(--small-size);
+  font-weight: 500;
+  color: var(--light-orange);
+  margin-bottom: 0.25rem;
+}
+
+.card__header p {
+  font-size: var(--large-size);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.card__header p span {
+  margin-right: 0.5rem;
+}
+
+.card__body {
+  padding: 2.125rem 1.75rem;
+}
+
+.card__main-information {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.card__wrapper-img {
+  width: 5.25rem;
+  height: 5.25rem;
+  background: var(--light-blue-gray);
+  border-radius: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.card__main-title {
+  margin: auto 0;
+}
+
+.card__main-title h4 {
+  font-size: var(--huge-size);
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 0.25rem;
+}
