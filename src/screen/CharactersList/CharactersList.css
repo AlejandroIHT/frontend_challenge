@@ -15,12 +15,19 @@
   column-gap: 2rem;
 }
 
-.characters-list__spinner {
+.characters-list__spinner,
+.characters-list__error {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1.5rem 0;
+}
+
+.characters-list__error h2 {
+  color: var(--red);
+  font-size: var(--big-size);
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1200px) {
