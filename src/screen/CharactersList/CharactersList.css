@@ -9,9 +9,18 @@
 }
 
 .characters-list__wrapper {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
+}
+
+.characters-list__spinner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
 }
 
 @media (max-width: 1200px) {
