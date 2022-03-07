@@ -1,12 +1,17 @@
 import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import CharactersList from './screen/CharactersList';
 import Layout from './ui/Layout';
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <Layout>
-      <CharactersList />
-    </Layout>
+    <QueryClientProvider client={queryClient}>
+      <Layout>
+        <CharactersList />
+      </Layout>
+    </QueryClientProvider>
   );
 }
 

@@ -21,6 +21,8 @@ const Character = ({
   location,
   image,
 }: CharacterProps) => {
+  const sanitizedType = !!type ? type : 'unknown';
+
   return (
     <Card className="character">
       <Card.Header
@@ -36,7 +38,11 @@ const Character = ({
           </Card.MainTitle>
         </Card.MainInformation>
         <Card.Description>
-          <InformationWithIcon icon={faDna} title="Type" description={type} />
+          <InformationWithIcon
+            icon={faDna}
+            title="Type"
+            description={sanitizedType}
+          />
           <InformationWithIcon
             icon={faDisease}
             title="Origin"

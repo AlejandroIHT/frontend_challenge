@@ -44,6 +44,12 @@
   background: var(--light-blue-gray);
   border-radius: 1.25rem;
   margin-right: 1.5rem;
+  overflow: hidden;
+}
+
+.card__wrapper-img img {
+  width: 100%;
+  height: auto;
 }
 
 .card__main-title {
