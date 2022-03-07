@@ -1,6 +1,7 @@
 import React from 'react';
 import './CharactersList.css';
 import Character from '../../components/Character';
+import useCharacters from '../../hooks/useCharacters';
 
 const CharactersList = () => {
   return (
