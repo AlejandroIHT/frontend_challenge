@@ -4,9 +4,6 @@ import Character from '../../components/Character';
 import useCharacters from '../../hooks/useCharacters';
 
 const CharactersList = () => {
-  const characters = useCharacters();
-  console.log({ characters });
-
   return (
     <div className="characters-list">
       <h1>Characters List</h1>
