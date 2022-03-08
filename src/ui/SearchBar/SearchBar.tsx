@@ -1,19 +1,27 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import React, { useRef } from 'react';
+import React from 'react';
 import './SearchBar.css';
 
-interface SearchBarProps extends React.HTMLAttributes<HTMLInputElement> {
+interface SearchBarProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
+  isLoading?: boolean;
 }
 
-const SearchBar = ({ placeholder, className, ...props }: SearchBarProps) => {
+const SearchBar = ({
+  placeholder,
+  isLoading,
+  className,
+  ...props
+}: SearchBarProps) => {
+  const isLoader = isLoading && 'search-bar__wrapper-icon--loading';
+
   return (
     <div className={classNames('search-bar', className)}>
       <label className="search-bar__label">
-        <span className="search-bar__wrapper-icon">
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <span className={classNames('search-bar__wrapper-icon', isLoader)}>
+          {!isLoading && <FontAwesomeIcon icon={faMagnifyingGlass} />}
         </span>
         <input type="text" placeholder={placeholder} {...props} />
       </label>

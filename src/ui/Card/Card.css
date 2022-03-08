@@ -31,6 +31,8 @@
 
 .card__body {
   padding: 2.125rem 1.75rem;
+  border: 0.063rem solid var(--red);
+  border-radius: 0 0 2rem 2rem;
 }
 
 .card__main-information {
