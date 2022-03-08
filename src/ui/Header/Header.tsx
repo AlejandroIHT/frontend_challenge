@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import SearchBar from '../SearchBar';
+import SearchCharacterName from '../../components/SearchCharacterName';
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
       <h4>
         Frontend-Challenge | <span>Rick&Morty</span>
       </h4>
-      <SearchBar placeholder="Search for name of character…" />
+      <SearchCharacterName />
     </div>
   );
 };
