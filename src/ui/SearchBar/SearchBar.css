@@ -27,6 +27,11 @@
   justify-self: self-start;
 }
 
+.search-bar__wrapper-icon--loading {
+  background: var(--red);
+  animation: loading 0.5s ease-in infinite alternate;
+}
+
 .search-bar__label input {
   background: transparent;
   border: none;
@@ -42,4 +47,13 @@
 
 .search-bar__label:hover {
   border: 0.063rem solid var(--red);
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
