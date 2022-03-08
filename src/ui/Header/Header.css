@@ -1,4 +1,11 @@
 .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3.375rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'title title title'
+    'search search filter';
+  grid-gap: 0.75rem;
   position: sticky;
   top: 0;
   background: var(--white);
@@ -8,13 +15,21 @@
 }
 
 .header > h4 {
+  grid-area: title;
   font-size: var(--huge-size);
   font-weight: 300;
   color: var(--blue-gray);
-  margin-bottom: 0.75rem;
 }
 
 .header > h4 span {
   font-weight: 700;
   color: var(--red);
+}
+
+.header__search {
+  grid-area: search;
+}
+
+.header_icon-button {
+  grid-area: filter;
 }
