@@ -1,0 +1,13 @@
+.icon-button {
+  width: 2.563rem;
+  height: 2.563rem;
+  border: none;
+  font-size: var(--large-size);
+  color: var(--dark);
+  font-weight: 400;
+  background: var(--light-blue-gray);
+  border-radius: 3.125rem;
+  border: 0.063rem solid var(--dark);
+  justify-self: flex-end;
+  cursor: pointer;
+}
