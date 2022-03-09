@@ -1,0 +1,82 @@
+.filter-modal {
+  width: 100%;
+  max-width: 56.25rem;
+  height: auto;
+  border-radius: 2rem;
+  border: 0.063rem solid var(--light-blue-gray);
+  box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%),
+    0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+}
+
+.filter-modal__header {
+  padding: 2rem 2rem 2rem 3.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-modal__header > h1 {
+  color: var(--red);
+  font-size: var(--mega-biggest-size);
+}
+
+.filter-modal__header > button {
+  border: none;
+  background: transparent;
+  font-size: var(--mega-biggest-size);
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-modal__body {
+  padding: 0 3.25rem 2rem 3.25rem;
+}
+
+.filter-modal__element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0px;
+}
+
+.filter-modal__element + .filter-modal__element {
+  border-top: 0.063rem solid rgba(0, 0, 0, 0.12);
+}
+
+.filter-modal__element > h3 {
+  font-size: var(--large-size);
+  color: var(--dark);
+}
+
+.filter-modal__actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-modal__actions > button:nth-child(1) {
+  font-size: var(--large-size);
+  font-weight: 600;
+  color: var(--white);
+  background: var(--red);
+  border: 0.125rem solid var(--red);
+  border-radius: 3.125rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.filter-modal__actions > button:nth-child(2) {
+  font-size: var(--large-size);
+  font-weight: 600;
+  color: var(--red);
+  background: white;
+  border: 0.125rem solid var(--red);
+  border-radius: 3.125rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
