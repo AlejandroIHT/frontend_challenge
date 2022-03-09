@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import CharactersList from './screen/CharactersList';
-import Layout from './ui/Layout';
+import Layout from './components/Layout';
 
 const queryClient = new QueryClient();
 
