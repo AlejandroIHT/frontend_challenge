@@ -82,6 +82,14 @@
   cursor: pointer;
 }
 
+.filter-modal__spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
 @media (max-width: 576px) {
   .filter-modal__element {
     flex-direction: column;
