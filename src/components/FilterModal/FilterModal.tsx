@@ -8,6 +8,7 @@ import { ActionButtonType } from '../../ui/ActionButton/ActionButton';
 import Modal from '../../ui/Modal';
 import ModalContext from '../../context/ModalContext/ModalContext';
 import useCharacters from '../../hooks/useCharacters';
+import Spinner from '../../ui/Spinner';
 
 const FilterModal = () => {
   const [statusValue, setStatusValue] = useState<string>('');
@@ -28,7 +29,8 @@ const FilterModal = () => {
   };
 
   const handleClickApplyFilters = async () => {
-    refetch();
+    await refetch();
+    window.scrollTo(0, 0);
     modalActions?.closeModal();
   };
 
@@ -90,6 +92,11 @@ const FilterModal = () => {
               ))}
             </div>
           </div>
+          {isFetching && (
+            <div className="filter-modal__spinner">
+              <Spinner />
+            </div>
+          )}
           <div className="filter-modal__actions">
             <ActionButton
               typeButton={ActionButtonType.PRIMARY}
