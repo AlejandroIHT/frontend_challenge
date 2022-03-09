@@ -8,6 +8,11 @@ jest.mock('../Header', () => ({
   default: () => <div>Header</div>,
 }));
 
+jest.mock('../FilterModal', () => ({
+  __esModule: true,
+  default: () => <div>FilterModal</div>,
+}));
+
 describe('Layout', () => {
   test('should render', () => {
     const { container } = render(<Layout>Layout test</Layout>);
