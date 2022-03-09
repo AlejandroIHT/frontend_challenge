@@ -3,12 +3,12 @@ import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
 import Header from './Header';
 
-jest.mock('../../components/SearchCharacterName', () => ({
+jest.mock('../SearchCharacterName', () => ({
   __esModule: true,
   default: () => <div>SearchCharacterName</div>,
 }));
 
-jest.mock('../IconButton', () => ({
+jest.mock('../../ui/IconButton', () => ({
   __esModule: true,
   default: () => <div>IconButton</div>,
 }));
