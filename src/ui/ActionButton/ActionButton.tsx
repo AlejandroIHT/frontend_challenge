@@ -3,14 +3,14 @@ import React from 'react';
 import './ActionButton.css';
 
 export enum ActionButtonType {
-  primary = 'primary',
-  secondary = 'secondary',
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
 }
 
 interface ActionButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  typeButton: ActionButtonType.primary | ActionButtonType.secondary;
+  typeButton: ActionButtonType.PRIMARY | ActionButtonType.SECONDARY;
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({
