@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.css';
-import SearchCharacterName from '../../components/SearchCharacterName';
+import SearchCharacterName from '../SearchCharacterName';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
-import IconButton from '../IconButton';
+import IconButton from '../../ui/IconButton';
 
 const Header = () => {
   return (
