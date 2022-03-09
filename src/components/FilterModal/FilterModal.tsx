@@ -1,48 +1,112 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './FilterModal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import FilterButton from '../../ui/FilterButton';
 import ActionButton from '../../ui/ActionButton';
 import { ActionButtonType } from '../../ui/ActionButton/ActionButton';
+import Modal from '../../ui/Modal';
+import ModalContext from '../../context/ModalContext/ModalContext';
+import useCharacters from '../../hooks/useCharacters';
 
 const FilterModal = () => {
+  const [statusValue, setStatusValue] = useState<string>('');
+  const [genderValue, setGenderValue] = useState<string>('');
+
+  const modalActions = useContext(ModalContext);
+  const { refetch, isFetching } = useCharacters({
+    statusParam: statusValue,
+    genderParam: genderValue,
+  });
+
+  const handleClickStatus = (value: string) => {
+    statusValue === value ? setStatusValue('') : setStatusValue(value);
+  };
+
+  const handleClickGender = (value: string) => {
+    genderValue === value ? setGenderValue('') : setGenderValue(value);
+  };
+
+  const handleClickApplyFilters = async () => {
+    refetch();
+    modalActions?.closeModal();
+  };
+
+  const handleClickClearFilters = async () => {
+    setStatusValue('');
+    setGenderValue('');
+  };
+
+  const statusActiveButton = {
+    ['alive']: statusValue === 'alive',
+    ['dead']: statusValue === 'dead',
+    ['unknown']: statusValue === 'unknown',
+  };
+
+  const genderActiveButton = {
+    ['female']: genderValue === 'female',
+    ['male']: genderValue === 'male',
+    ['genderless']: genderValue === 'genderless',
+    ['unknown']: genderValue === 'unknown',
+  };
+
   return (
-    <div className="filter-modal">
-      <div className="filter-modal__header">
-        <h1>Filter Modal</h1>
-        <button>
-          <FontAwesomeIcon icon={faCircleXmark} />
-        </button>
-      </div>
-      <div className="filter-modal__body">
-        <div className="filter-modal__element">
-          <h3>To status</h3>
-          <div>
-            <FilterButton>Alive</FilterButton>
-            <FilterButton>Dead</FilterButton>
-            <FilterButton>Unknown</FilterButton>
+    <Modal isOpen={modalActions?.isOpen || false}>
+      <div className="filter-modal">
+        <div className="filter-modal__header">
+          <h1>Filter by</h1>
+          <button onClick={modalActions?.closeModal}>
+            <FontAwesomeIcon icon={faCircleXmark} />
+          </button>
+        </div>
+        <div className="filter-modal__body">
+          <div className="filter-modal__element">
+            <h3>Status</h3>
+            <div>
+              {Object.entries(statusActiveButton).map(
+                ([statusCharacter, status]) => (
+                  <FilterButton
+                    key={statusCharacter}
+                    onClick={() => handleClickStatus(statusCharacter)}
+                    isActive={status}
+                  >
+                    {statusCharacter}
+                  </FilterButton>
+                )
+              )}
+            </div>
+          </div>
+          <div className="filter-modal__element">
+            <h3>Gender</h3>
+            <div>
+              {Object.entries(genderActiveButton).map(([gender, status]) => (
+                <FilterButton
+                  key={gender}
+                  onClick={() => handleClickGender(gender)}
+                  isActive={status}
+                >
+                  {gender}
+                </FilterButton>
+              ))}
+            </div>
+          </div>
+          <div className="filter-modal__actions">
+            <ActionButton
+              typeButton={ActionButtonType.PRIMARY}
+              onClick={handleClickApplyFilters}
+            >
+              Apply filter
+            </ActionButton>
+            <ActionButton
+              typeButton={ActionButtonType.SECONDARY}
+              onClick={handleClickClearFilters}
+            >
+              Clear filter
+            </ActionButton>
           </div>
         </div>
-        <div className="filter-modal__element">
-          <h3>To gender</h3>
-          <div>
-            <FilterButton>Female</FilterButton>
-            <FilterButton>Male</FilterButton>
-            <FilterButton>Genderless</FilterButton>
-            <FilterButton>Unknown</FilterButton>
-          </div>
-        </div>
-        <div className="filter-modal__actions">
-          <ActionButton typeButton={ActionButtonType.PRIMARY}>
-            Apply filter
-          </ActionButton>
-          <ActionButton typeButton={ActionButtonType.SECONDARY}>
-            Clear filter
-          </ActionButton>
-        </div>
       </div>
-    </div>
+    </Modal>
   );
 };
 
