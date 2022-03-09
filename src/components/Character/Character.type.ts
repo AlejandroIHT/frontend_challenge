@@ -13,4 +13,5 @@ export interface CharacterProps {
   origin: OriginCharacter;
   location: LocationCharacter;
   image: string;
+  gender: string;
 }

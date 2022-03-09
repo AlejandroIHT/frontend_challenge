@@ -19,6 +19,11 @@
   color: var(--light-blue-gray);
 }
 
+.filter-button--active:hover {
+  background: var(--red);
+  color: var(--light-blue-gray);
+}
+
 .filter-button + .filter-button {
   margin-left: 1rem;
 }

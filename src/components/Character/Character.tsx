@@ -20,6 +20,7 @@ const Character = ({
   origin,
   location,
   image,
+  gender,
 }: CharacterProps) => {
   const sanitizedType = !!type ? type : 'unknown';
 
@@ -35,6 +36,7 @@ const Character = ({
           <Card.Image src={image} alt={name} />
           <Card.MainTitle title={name}>
             <Tag type={TagType.SECONDARY}>{species}</Tag>
+            <Tag type={TagType.SECONDARY}>{gender}</Tag>
           </Card.MainTitle>
         </Card.MainInformation>
         <Card.Description>
