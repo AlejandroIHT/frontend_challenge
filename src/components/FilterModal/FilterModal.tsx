@@ -71,6 +71,7 @@ const FilterModal = () => {
                     key={statusCharacter}
                     onClick={() => handleClickStatus(statusCharacter)}
                     isActive={status}
+                    data-testid="status-button"
                   >
                     {statusCharacter}
                   </FilterButton>
@@ -86,6 +87,7 @@ const FilterModal = () => {
                   key={gender}
                   onClick={() => handleClickGender(gender)}
                   isActive={status}
+                  data-testid="gender-button"
                 >
                   {gender}
                 </FilterButton>
