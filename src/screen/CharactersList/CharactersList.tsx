@@ -17,7 +17,7 @@ const CharactersList = () => {
     isFetchingNextPage,
     fetchNextPage,
     hasNextPage,
-  } = useCharacters();
+  } = useCharacters({});
   const hasExternalRef = isLoading ? null : endScreenRef;
   const { endScreen } = useEndScreen({
     externalRef: hasExternalRef,
@@ -43,8 +43,16 @@ const CharactersList = () => {
         <div className="characters-list__wrapper">
           {charactersInfo?.pages?.map((page: Characters) =>
             page.results.map((character) => {
-              const { name, status, species, type, origin, location, image } =
-                character;
+              const {
+                name,
+                status,
+                species,
+                type,
+                origin,
+                location,
+                gender,
+                image,
+              } = character;
               return (
                 <Character
                   key={character.id}
@@ -55,6 +63,7 @@ const CharactersList = () => {
                   origin={origin}
                   location={location}
                   image={image}
+                  gender={gender}
                 />
               );
             })
