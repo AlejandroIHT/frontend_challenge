@@ -5,6 +5,10 @@
   font-weight: 500;
 }
 
+.tag + .tag {
+  margin-left: 0.5rem;
+}
+
 .tag--primary {
   background: var(--light-red);
   color: var(--red);
