@@ -1,0 +1,18 @@
+.action-button {
+  font-size: var(--large-size);
+  font-weight: 600;
+  border: 0.125rem solid var(--red);
+  border-radius: 3.125rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.action-button--primary {
+  color: var(--white);
+  background: var(--red);
+}
+
+.action-button--secondary {
+  color: var(--red);
+  background: var(--white);
+}
