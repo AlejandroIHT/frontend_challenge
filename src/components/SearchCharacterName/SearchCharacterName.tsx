@@ -5,7 +5,7 @@ import SearchBar from '../../ui/SearchBar';
 
 const SearchCharacterName = ({ className }: { className: string }) => {
   const [searchValue, setSearchValue] = useState<string>('');
-  const { refetch, isFetching } = useCharacters(searchValue);
+  const { refetch, isFetching } = useCharacters({ nameParam: searchValue });
 
   const debouncedHandleNextPage = useCallback(
     debounce(() => !isFetching && refetch(), 1000),
