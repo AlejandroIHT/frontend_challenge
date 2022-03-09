@@ -1,0 +1,24 @@
+.filter-button {
+  border: 0.125rem solid var(--light-blue-gray);
+  background: transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1.563rem;
+  color: var(--dark);
+  font-size: var(--medium-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background: var(--light-blue-gray);
+  color: var(--red);
+}
+
+.filter-button--active {
+  background: var(--red);
+  color: var(--light-blue-gray);
+}
+
+.filter-button + .filter-button {
+  margin-left: 1rem;
+}
