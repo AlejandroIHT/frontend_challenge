@@ -3,11 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import React from 'react';
 import './SearchBar.css';
-
-interface SearchBarProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-  isLoading?: boolean;
-}
+import { SearchBarProps } from './SearchBar.type';
 
 const SearchBar = ({
   placeholder,
