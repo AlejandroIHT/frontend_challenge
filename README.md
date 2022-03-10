@@ -11,6 +11,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 __PD:__ _I could see that Rick&Morty API has a bug with search by name or filter mix, send the same characters sometimes. You can see this in network from browser and you will see that query is correct but the response from backend is wrong. I researched it and I found another projects that uses the same API and have same issue, like this_ https://react-projects-psi.vercel.app/
 .I'm sorry for select an API with issues. Maybe if you review as incognito window could works.
 
+## Instalation
+
+
+You will need node and npm installed globally on your machine.
+
+In the project folder use code:
+
+```bash
+npm install
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
