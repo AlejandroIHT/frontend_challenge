@@ -6,7 +6,7 @@ Rick and Morty App! you can see list of characters from this tv show, also you c
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), was used[TypeScript](https://www.typescriptlang.org/), hooks from [React](https://es.reactjs.org/docs/hooks-intro.html) as well, and [React Query](https://react-query.tanstack.com/) for controling state of request. For the API, was used [Rick and Morty](https://rickandmortyapi.com/documentation).
 
-_PD:_ I could see that Rick&Morty API has a bug with search by name, send the same characters sometimes. You can see this in network from browser and you will see that query is correct but the response from backend is bad.
+__PD:__ _I could see that Rick&Morty API has a bug with search by name, send the same characters sometimes. You can see this in network from browser and you will see that query is correct but the response from backend is wrong._
 
 ## Available Scripts
 
