@@ -1,7 +1,7 @@
 import React from 'react';
-import Footer from '../../ui/Footer';
-import FilterModal from '../FilterModal';
-import Header from '../Header';
+import Footer from '../Footer';
+import FilterModal from '../../components/FilterModal';
+import Header from '../../components/Header';
 import './Layout.css';
 
 const Layout: React.FC = ({ children }) => {
