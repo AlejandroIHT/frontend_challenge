@@ -1,6 +1,6 @@
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Reacrt from 'react';
+import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
@@ -11,6 +11,7 @@ const Footer = () => {
         <a
           href="https://www.linkedin.com/in/alejandroherrerat/"
           target="_blank"
+          rel="noreferrer"
         >
           Alejandro Herrera Turra
         </a>
