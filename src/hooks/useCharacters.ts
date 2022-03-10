@@ -30,6 +30,7 @@ const useCharacters = ({
       }),
       {
         getNextPageParam,
+        refetchOnWindowFocus: false,
       }
     );
 
