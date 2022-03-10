@@ -2,39 +2,15 @@ import React from 'react';
 import './Card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-
-interface HeaderProps {
-  title: string;
-  icon: any;
-  status: string;
-  className?: string;
-}
-
-interface BodyProps {
-  className?: string;
-}
-
-interface MainInformationProps {
-  className?: string;
-}
-
-interface ImageProps {
-  src: string;
-  alt: string;
-}
-
-interface MainTitleProps {
-  title: string;
-}
-
-interface DescriptionProps {
-  className?: string;
-}
-
-interface CardProps {
-  className?: string;
-  children: React.ReactNode;
-}
+import {
+  BodyProps,
+  CardProps,
+  DescriptionProps,
+  HeaderProps,
+  ImageProps,
+  MainInformationProps,
+  MainTitleProps,
+} from './Card.type';
 
 const Header = ({ title, icon, status, className }: HeaderProps) => {
   return (
