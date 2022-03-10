@@ -2,12 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import React from 'react';
 import './IconButton.css';
-
-interface IconButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  icon: any;
-  className?: string;
-}
+import { IconButtonProps } from './IconButton.type';
 
 const IconButton = ({ icon, className, ...props }: IconButtonProps) => {
   return (
