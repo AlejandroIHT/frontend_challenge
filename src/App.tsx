@@ -6,7 +6,6 @@ import ModalState from './context/ModalContext/ModalState';
 import FilterState from './context/FilterContext/FilterState';
 
 const queryClient = new QueryClient();
-queryClient.invalidateQueries();
 
 function App() {
   return (
