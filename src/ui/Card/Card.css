@@ -42,6 +42,7 @@
 
 .card__wrapper-img {
   width: 5.25rem;
+  min-width: 5.25rem;
   height: 5.25rem;
   background: var(--light-blue-gray);
   border-radius: 1.25rem;
