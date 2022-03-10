@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import CharactersList from './screen/CharactersList';
-import Layout from './components/Layout';
+import Layout from './ui/Layout';
 import ModalState from './context/ModalContext/ModalState';
 
 const queryClient = new QueryClient();
