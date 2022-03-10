@@ -2,8 +2,9 @@ import debounce from 'just-debounce-it';
 import React, { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import useCharacters from '../../hooks/useCharacters';
 import SearchBar from '../../ui/SearchBar';
+import { SearchCharacterNameProps } from './SearchCharacterName.type';
 
-const SearchCharacterName = ({ className }: { className?: string }) => {
+const SearchCharacterName = ({ className }: SearchCharacterNameProps) => {
   const [searchValue, setSearchValue] = useState<string>('');
   const { refetch, isFetching } = useCharacters({ nameParam: searchValue });
 

@@ -6,11 +6,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Character.css';
-import Card from '../../ui/Card';
-import InformationWithIcon from '../../ui/InformationWithIcon';
-import Tag from '../../ui/Tag';
-import { TagType } from '../../ui/Tag/Tag';
-import { CharacterProps } from './Character.type';
+import Card from '../Card';
+import InformationWithIcon from '../InformationWithIcon';
+import Tag from '../Tag';
+import { TagType } from '../Tag/Tag.type';
+import { CharacterType } from '../../services/characters/characters.type';
 
 const Character = ({
   name,
@@ -21,7 +21,7 @@ const Character = ({
   location,
   image,
   gender,
-}: CharacterProps) => {
+}: CharacterType) => {
   const sanitizedType = !!type ? type : 'unknown';
 
   return (

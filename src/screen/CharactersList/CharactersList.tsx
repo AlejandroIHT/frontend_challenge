@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import './CharactersList.css';
-import Character from '../../components/Character';
+import Character from '../../ui/Character';
 import useCharacters from '../../hooks/useCharacters';
 import Spinner from '../../ui/Spinner';
 import { Characters } from '../../services/characters/characters.type';
@@ -42,31 +42,7 @@ const CharactersList = () => {
       {showCharacters && (
         <div className="characters-list__wrapper">
           {charactersInfo?.pages?.map((page: Characters) =>
-            page.results.map((character) => {
-              const {
-                name,
-                status,
-                species,
-                type,
-                origin,
-                location,
-                gender,
-                image,
-              } = character;
-              return (
-                <Character
-                  key={character.id}
-                  name={name}
-                  status={status}
-                  species={species}
-                  type={type}
-                  origin={origin}
-                  location={location}
-                  image={image}
-                  gender={gender}
-                />
-              );
-            })
+            page.results.map((character) => <Character {...character} />)
           )}
         </div>
       )}

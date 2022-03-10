@@ -3,12 +3,12 @@ import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
 import Layout from './Layout';
 
-jest.mock('../Header', () => ({
+jest.mock('../../components/Header', () => ({
   __esModule: true,
   default: () => <div>Header</div>,
 }));
 
-jest.mock('../FilterModal', () => ({
+jest.mock('../../components/FilterModal', () => ({
   __esModule: true,
   default: () => <div>FilterModal</div>,
 }));

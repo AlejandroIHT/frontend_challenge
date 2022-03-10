@@ -1,12 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import './FilterButton.css';
-
-interface FilterButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  isActive?: boolean;
-  className?: string;
-}
+import { FilterButtonProps } from './FilterButton.type';
 
 const FilterButton: React.FC<FilterButtonProps> = ({
   children,

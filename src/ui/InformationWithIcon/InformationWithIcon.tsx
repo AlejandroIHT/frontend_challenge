@@ -1,12 +1,7 @@
 import React from 'react';
 import './InformationWithIcon.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-interface InformationWithIconProps {
-  icon: any;
-  title: string;
-  description: string;
-}
+import { InformationWithIconProps } from './InformationWithIcon.type';
 
 const InformationWithIcon = ({
   icon,
