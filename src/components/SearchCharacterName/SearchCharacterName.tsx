@@ -3,7 +3,7 @@ import React, { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import useCharacters from '../../hooks/useCharacters';
 import SearchBar from '../../ui/SearchBar';
 
-const SearchCharacterName = ({ className }: { className: string }) => {
+const SearchCharacterName = ({ className }: { className?: string }) => {
   const [searchValue, setSearchValue] = useState<string>('');
   const { refetch, isFetching } = useCharacters({ nameParam: searchValue });
 
