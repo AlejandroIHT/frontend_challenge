@@ -1,12 +1,23 @@
 import debounce from 'just-debounce-it';
-import React, { ChangeEvent, useCallback, useEffect, useState } from 'react';
+import React, {
+  ChangeEvent,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import useCharacters from '../../hooks/useCharacters';
 import SearchBar from '../../ui/SearchBar';
 import { SearchCharacterNameProps } from './SearchCharacterName.type';
+import FilterContext from '../../context/FilterContext/FilterContext';
 
 const SearchCharacterName = ({ className }: SearchCharacterNameProps) => {
-  const [searchValue, setSearchValue] = useState<string>('');
-  const { refetch, isFetching } = useCharacters({ nameParam: searchValue });
+  const filterActions = useContext(FilterContext);
+  const { refetch, isFetching } = useCharacters({
+    nameParam: filterActions?.searchValue,
+    statusParam: filterActions?.statusValue,
+    genderParam: filterActions?.genderValue,
+  });
 
   const debouncedHandleNextPage = useCallback(
     debounce(() => !isFetching && refetch(), 1000),
@@ -15,18 +26,13 @@ const SearchCharacterName = ({ className }: SearchCharacterNameProps) => {
 
   useEffect(() => {
     debouncedHandleNextPage();
-  }, [searchValue]);
-
-  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setSearchValue(value);
-  };
+  }, [filterActions?.searchValue]);
 
   return (
     <SearchBar
       className={className}
-      value={searchValue}
-      onChange={handleSearch}
+      value={filterActions?.searchValue}
+      onChange={filterActions?.handleSearch}
       isLoading={isFetching}
       placeholder="Search for name of character…"
     />

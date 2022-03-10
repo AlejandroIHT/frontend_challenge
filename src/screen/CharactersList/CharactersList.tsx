@@ -42,7 +42,9 @@ const CharactersList = () => {
       {showCharacters && (
         <div className="characters-list__wrapper">
           {charactersInfo?.pages?.map((page: Characters) =>
-            page.results.map((character) => <Character {...character} />)
+            page.results.map((character) => (
+              <Character key={character.id} {...character} />
+            ))
           )}
         </div>
       )}

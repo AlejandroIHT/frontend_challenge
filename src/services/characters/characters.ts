@@ -12,7 +12,7 @@ const charactersService =
     const hasNameParem = nameParam ? `&name=${nameParam}` : '';
     const hasStatusParem = statusParam ? `&status=${statusParam}` : '';
     const hasGenderParem = genderParam ? `&gender=${genderParam}` : '';
-    const urlCharacters = `${BASE_API_URL}/character/?page=${pageParam}${hasNameParem}${hasStatusParem}${hasGenderParem}`;
+    const urlCharacters = `${BASE_API_URL}/character/?page=${pageParam}${hasStatusParem}${hasGenderParem}${hasNameParem}`;
     const response = await fetch(urlCharacters, {
       headers: {
         'Content-Type': 'application/json',
