@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1be2b1a3.css",
+    "main.js": "/static/js/main.935c2e34.js",
+    "static/media/Nunito-LightItalic.ttf": "/static/media/Nunito-LightItalic.691c3a7a6a0f308f10f6.ttf",
+    "static/media/Nunito-MediumItalic.ttf": "/static/media/Nunito-MediumItalic.33c60bf607807c75b990.ttf",
+    "static/media/Nunito-Italic.ttf": "/static/media/Nunito-Italic.5048dbf6d175e30b8378.ttf",
+    "static/media/Nunito-ExtraBoldItalic.ttf": "/static/media/Nunito-ExtraBoldItalic.d2dd6fd6c54789d53526.ttf",
+    "static/media/Nunito-SemiBoldItalic.ttf": "/static/media/Nunito-SemiBoldItalic.d3b2eb0e78c32b5d46be.ttf",
+    "static/media/Nunito-BoldItalic.ttf": "/static/media/Nunito-BoldItalic.5cee6675c205bdc2fa44.ttf",
+    "static/media/Nunito-ExtraLightItalic.ttf": "/static/media/Nunito-ExtraLightItalic.a76c5b7c36bed98e9632.ttf",
+    "static/media/Nunito-BlackItalic.ttf": "/static/media/Nunito-BlackItalic.335e10179a67d2524f8c.ttf",
+    "static/media/Nunito-Medium.ttf": "/static/media/Nunito-Medium.5c758da119667f9f989f.ttf",
+    "static/media/Nunito-Light.ttf": "/static/media/Nunito-Light.8f5610014505d18f0ffe.ttf",
+    "static/media/Nunito-Regular.ttf": "/static/media/Nunito-Regular.325f6b17880102deb0a8.ttf",
+    "static/media/Nunito-SemiBold.ttf": "/static/media/Nunito-SemiBold.6a5a212cd3c4da7e7ba8.ttf",
+    "static/media/Nunito-Bold.ttf": "/static/media/Nunito-Bold.4553e8e307fb4dc343b7.ttf",
+    "static/media/Nunito-ExtraBold.ttf": "/static/media/Nunito-ExtraBold.203b93f489123ffb7763.ttf",
+    "static/media/Nunito-Black.ttf": "/static/media/Nunito-Black.65140864829fb5dce3a1.ttf",
+    "static/media/Nunito-ExtraLight.ttf": "/static/media/Nunito-ExtraLight.165fc745d7ed05ceb37d.ttf",
+    "index.html": "/index.html",
+    "main.1be2b1a3.css.map": "/static/css/main.1be2b1a3.css.map",
+    "main.935c2e34.js.map": "/static/js/main.935c2e34.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1be2b1a3.css",
+    "static/js/main.935c2e34.js"
+  ]
+}
