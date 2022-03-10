@@ -1,17 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import './ActionButton.css';
-
-export enum ActionButtonType {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-}
-
-interface ActionButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  typeButton: ActionButtonType.PRIMARY | ActionButtonType.SECONDARY;
-}
+import { ActionButtonProps } from './ActionButton.type';
 
 const ActionButton: React.FC<ActionButtonProps> = ({
   children,

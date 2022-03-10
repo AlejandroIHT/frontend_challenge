@@ -1,7 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
-import ActionButton, { ActionButtonType } from './ActionButton';
+import ActionButton from './ActionButton';
+import { ActionButtonType } from './ActionButton.type';
 
 describe('ActionButton component', () => {
   test('should render', () => {
