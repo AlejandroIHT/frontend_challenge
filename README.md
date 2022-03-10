@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Frontend-Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Rick and Morty App! you can see list of characters from this tv show, also you can search by name of characters and add gender filter and status filter. So you will see characters description like hero cards to you can search more easy.
+
+## How was build
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), was used[TypeScript](https://www.typescriptlang.org/), hooks from [React](https://es.reactjs.org/docs/hooks-intro.html) as well, and [React Query](https://react-query.tanstack.com/) for controling state of request. For the API, was used [Rick and Morty](https://rickandmortyapi.com/documentation).
+
+_PD:_ I could see that Rick&Morty API has a bug with search by name, send the same characters sometimes. You can see this in network from browser and you will see that query is correct but the response from backend is bad.
 
 ## Available Scripts
 
@@ -14,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
