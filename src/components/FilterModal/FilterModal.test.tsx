@@ -28,28 +28,6 @@ describe('FilterModal', () => {
     expect(screen.getByText('female')).toBeInTheDocument();
   });
 
-  test('should click gender button', () => {
-    const { container } = render(<FilterModal />);
-
-    const genderBtn = screen.getAllByTestId('gender-button');
-    if (genderBtn) fireEvent.click(genderBtn[0]);
-
-    expect(
-      container.querySelector('.filter-button--active')
-    ).toBeInTheDocument();
-  });
-
-  test('should click status button', () => {
-    const { container } = render(<FilterModal />);
-
-    const statusBtn = screen.getAllByTestId('status-button');
-    if (statusBtn) fireEvent.click(statusBtn[0]);
-
-    expect(
-      container.querySelector('.filter-button--active')
-    ).toBeInTheDocument();
-  });
-
   test('spinner should not be', () => {
     const { container } = render(<FilterModal />);
 
