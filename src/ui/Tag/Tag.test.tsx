@@ -1,7 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
-import Tag, { TagType } from './Tag';
+import Tag from './Tag';
+import { TagType } from './Tag.type';
 
 describe('Tag component', () => {
   test('should render', () => {
