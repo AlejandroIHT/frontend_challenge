@@ -9,24 +9,17 @@ import Modal from '../../ui/Modal';
 import ModalContext from '../../context/ModalContext/ModalContext';
 import useCharacters from '../../hooks/useCharacters';
 import Spinner from '../../ui/Spinner';
+import FilterContext from '../../context/FilterContext/FilterContext';
 
 const FilterModal = () => {
-  const [statusValue, setStatusValue] = useState<string>('');
-  const [genderValue, setGenderValue] = useState<string>('');
+  const filterActions = useContext(FilterContext);
 
   const modalActions = useContext(ModalContext);
   const { refetch, isFetching } = useCharacters({
-    statusParam: statusValue,
-    genderParam: genderValue,
+    nameParam: filterActions?.searchValue,
+    statusParam: filterActions?.statusValue,
+    genderParam: filterActions?.genderValue,
   });
-
-  const handleClickStatus = (value: string) => {
-    statusValue === value ? setStatusValue('') : setStatusValue(value);
-  };
-
-  const handleClickGender = (value: string) => {
-    genderValue === value ? setGenderValue('') : setGenderValue(value);
-  };
 
   const handleClickApplyFilters = async () => {
     await refetch();
@@ -34,22 +27,17 @@ const FilterModal = () => {
     modalActions?.closeModal();
   };
 
-  const handleClickClearFilters = async () => {
-    setStatusValue('');
-    setGenderValue('');
-  };
-
   const statusActiveButton = {
-    ['alive']: statusValue === 'alive',
-    ['dead']: statusValue === 'dead',
-    ['unknown']: statusValue === 'unknown',
+    ['alive']: filterActions?.statusValue === 'alive',
+    ['dead']: filterActions?.statusValue === 'dead',
+    ['unknown']: filterActions?.statusValue === 'unknown',
   };
 
   const genderActiveButton = {
-    ['female']: genderValue === 'female',
-    ['male']: genderValue === 'male',
-    ['genderless']: genderValue === 'genderless',
-    ['unknown']: genderValue === 'unknown',
+    ['female']: filterActions?.genderValue === 'female',
+    ['male']: filterActions?.genderValue === 'male',
+    ['genderless']: filterActions?.genderValue === 'genderless',
+    ['unknown']: filterActions?.genderValue === 'unknown',
   };
 
   return (
@@ -69,7 +57,9 @@ const FilterModal = () => {
                 ([statusCharacter, status]) => (
                   <FilterButton
                     key={statusCharacter}
-                    onClick={() => handleClickStatus(statusCharacter)}
+                    onClick={() =>
+                      filterActions?.handleClickStatus(statusCharacter)
+                    }
                     isActive={status}
                     data-testid="status-button"
                   >
@@ -85,7 +75,7 @@ const FilterModal = () => {
               {Object.entries(genderActiveButton).map(([gender, status]) => (
                 <FilterButton
                   key={gender}
-                  onClick={() => handleClickGender(gender)}
+                  onClick={() => filterActions?.handleClickGender(gender)}
                   isActive={status}
                   data-testid="gender-button"
                 >
@@ -108,7 +98,7 @@ const FilterModal = () => {
             </ActionButton>
             <ActionButton
               typeButton={ActionButtonType.SECONDARY}
-              onClick={handleClickClearFilters}
+              onClick={filterActions?.handleClickClearFilters}
             >
               Clear filter
             </ActionButton>
