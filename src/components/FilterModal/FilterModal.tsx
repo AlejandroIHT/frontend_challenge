@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import FilterButton from '../../ui/FilterButton';
 import ActionButton from '../../ui/ActionButton';
-import { ActionButtonType } from '../../ui/ActionButton/ActionButton';
+import { ActionButtonType } from '../../ui/ActionButton/ActionButton.type';
 import Modal from '../../ui/Modal';
 import ModalContext from '../../context/ModalContext/ModalContext';
 import useCharacters from '../../hooks/useCharacters';
