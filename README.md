@@ -8,7 +8,8 @@ __Link:__ https://frontend-challenge-kappa.vercel.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), was used[TypeScript](https://www.typescriptlang.org/), hooks from [React](https://es.reactjs.org/docs/hooks-intro.html) as well, and [React Query](https://react-query.tanstack.com/) for controling state of request. For the API, was used [Rick and Morty](https://rickandmortyapi.com/documentation).
 
-__PD:__ _I could see that Rick&Morty API has a bug with search by name or filter mix, send the same characters sometimes. You can see this in network from browser and you will see that query is correct but the response from backend is wrong. I researched it and I found another projects that uses the same API and have same issue, like this https://react-projects-psi.vercel.app/
+__PD:__ _I could see that Rick&Morty API has a bug with search by name or filter mix, send the same characters sometimes. You can see this in network from browser and you will see that query is correct but the response from backend is wrong. I researched it and I found another projects that uses the same API and have same issue, like this_ https://react-projects-psi.vercel.app/
+.I'm sorry for select an API with issues. 
 
 ## Available Scripts
 
