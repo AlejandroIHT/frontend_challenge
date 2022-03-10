@@ -10,7 +10,7 @@ interface OriginAndLocation {
   url: string
 }
 
-export interface Character {
+export interface CharacterType {
   id: number,
   name: string,
   status: string,
@@ -27,6 +27,6 @@ export interface Character {
 
 export interface Characters {
   info: InfoResponseAPI,
-  results: Character[]
+  results: CharacterType[]
 }
 
