@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
 import Character from './Character';
-import { CharacterProps } from './Character.type';
+import { CharacterType } from '../../services/characters/characters.type';
 
 const characterInformation = {
   name: 'name character',
@@ -19,7 +19,7 @@ const characterInformation = {
   },
   image: 'image',
   gender: 'gender',
-} as CharacterProps;
+} as CharacterType;
 
 describe('Character', () => {
   test('should render', () => {
