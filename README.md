@@ -1,7 +1,8 @@
 # Frontend-Challenge
 
 Rick and Morty App! you can see list of characters from this tv show, also you can search by name of characters and add gender filter and status filter. So you will see characters description like hero cards to you can search more easy.
-__Link:__ frontend-challenge-kappa.vercel.app
+
+__Link:__ https://frontend-challenge-kappa.vercel.app/
 
 ## How was build
 
