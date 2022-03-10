@@ -23,7 +23,12 @@ const SearchBar = ({
         <span className={classNames('search-bar__wrapper-icon', isLoader)}>
           {!isLoading && <FontAwesomeIcon icon={faMagnifyingGlass} />}
         </span>
-        <input type="text" placeholder={placeholder} {...props} />
+        <input
+          data-testid="input-search"
+          type="text"
+          placeholder={placeholder}
+          {...props}
+        />
       </label>
     </div>
   );
